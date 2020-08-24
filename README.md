@@ -1,5 +1,7 @@
 # My dotfiles
 
+I forked this repo from [here](https://github.com/ArnaudLevaufre/dotfiles).
+
 # Installation using stow
 
 [Stow](https://www.gnu.org/software/stow/) can be used to install the dotfiles

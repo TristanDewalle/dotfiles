@@ -32,12 +32,6 @@ disk "/" {
     format_below_threshold = "DISK %percentage_avail"
 }
 
-memory {
-    format = ""
-    threshold_degraded = "512M"
-    format_degraded = "MEMORY %available"
-}
-
 tztime local {
     format = "%Y-%m-%d %H:%M:%S"
 }

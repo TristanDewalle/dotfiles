@@ -16,12 +16,27 @@ if (has("termguicolors"))
     set termguicolors
 endif
 
+vnoremap <C-r> "hy:%s/<C-r>h//g<left><left>
+
+" Latex specific instructions
 autocmd BufEnter *.tex set spell spelllang=fr
 autocmd BufEnter *.tex set spell
 autocmd BufEnter *.tex syntax spell toplevel
 autocmd BufEnter *.tex set tw=80
-vnoremap <C-r> "hy:%s/<C-r>h//g<left><left>
 
+" YAML specific instructions
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Syntastic configuration
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_yaml_checkers = ['yamllint']
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
@@ -41,6 +56,7 @@ Plugin 'https://github.com/nvie/vim-flake8.git'
 Plugin 'psf/black.git'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Yggdroot/indentLine'
+Plugin 'https://github.com/vim-syntastic/syntastic.git'
 Plugin 'https://github.com/rakr/vim-one.git'
 
 "if &diff

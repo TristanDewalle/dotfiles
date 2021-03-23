@@ -11,11 +11,13 @@ alias lock='i3lock -i /home/tristan/Pictures/Wallpapers/converted/steampunk_eye.
 alias pdf_merge='gs -dBATCH -dNOPAUSE -q -sDEVICE=pdfwrite -sOutputFile='
 #final first, next file1, file2, etc
 alias update_urxvt='xrdb ~/.Xresources'
-alias bye='systemctl suspend' # && i3lock'
+alias bye='systemctl suspend'
+#alias bye='systemctl suspend && i3lock'
 alias logout='i3-msg exit'
 alias se='sudoedit'
 alias ds='xrandr --output VGA-1 --right-of DP-1'
 alias tree='tree -C'
+alias fp='git commit -m "Work In Progress" && git push'  # Fast push exclusively for branches which will be squashed
 
 alias cp="cp -v"
 alias df="df -h"

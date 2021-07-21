@@ -216,9 +216,9 @@ bindsym --release Control+Print exec "scrot -s && ~/Scripts/screenshot_saver"
 #workspace 9 output VGA-1
 #workspace 2 output VGA-1
 #workspace 12 output VGA-1
-workspace 9 output DP-1
-workspace 2 output DP-1
-workspace 12 output DP-1
+#workspace 9 output DP-1
+#workspace 2 output DP-1
+#workspace 12 output DP-1
 #assign [class="Thunderbird"] number "9: Thunderbird" 
 assign [class="Firefox"] 2 www
 assign [class="Thunderbird"] 9 mail
